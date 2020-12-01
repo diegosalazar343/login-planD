@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     createAccountForm.classList.remove("form-hidden");
   });
 
-  /*document.querySelector("#linklogin").addEventListener("click", event => {
+  document.querySelector("#linklogin").addEventListener("click", event => {
     loginForm.classList.remove("form-hidden");
     createAccountForm.classList.add("form-hidden");
-  });*/
+  });
 
   loginForm.addEventListener("submit", event => {
     event.preventDefault();
