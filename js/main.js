@@ -17,6 +17,7 @@ function clearInputError(inputElement) {
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
+  $(".container-2").hide();
   const loginForm = document.querySelector("#login");
   const createAccountForm = document.querySelector("#createAccount");
 
@@ -26,10 +27,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     createAccountForm.classList.remove("form-hidden");
   });
 
-  document.querySelector("#linklogin").addEventListener("click", event => {
+  /*document.querySelector("#linklogin").addEventListener("click", event => {
     loginForm.classList.remove("form-hidden");
     createAccountForm.classList.add("form-hidden");
-  });
+  });*/
 
   loginForm.addEventListener("submit", event => {
     event.preventDefault();
@@ -46,6 +47,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     inputElement.addEventListener("input", event => {
       clearInputError(inputElement);
+    });
+    $("#linkCreateAccount").click(function() {
+      $(".container").hide();
+      $(".container-2").show();
     });
   });
 });
